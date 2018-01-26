@@ -1,4 +1,4 @@
-# Awesome Project Build with TypeORM
+# Express, TypeScript, TypeORM starter application.
         
 Steps to run this project:
 
