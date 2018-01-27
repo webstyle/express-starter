@@ -16,6 +16,7 @@ export class UserController {
 
     @Post("/")
     async post(@Body() user: User): Promise<string> {
+        console.log(user);
         return "Saving user...";
     }
 
