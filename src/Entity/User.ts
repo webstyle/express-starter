@@ -17,15 +17,6 @@ export class User {
     @Column()
     private _password: string;
 
-    constructor(id: number, firstName: string, lastName: string, age: number, password: string) {
-        this._id = id;
-        this._firstName = firstName;
-        this._lastName = lastName;
-        this._age = age;
-        this._password = password;
-    }
-
-
     get id(): number {
         return this._id;
     }
