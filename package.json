@@ -15,9 +15,11 @@
       "express": "^4.16.2",
       "pg": "^7.3.0",
       "reflect-metadata": "^0.1.10",
+      "routing-controllers": "^0.7.6",
       "typeorm": "0.1.11"
    },
    "scripts": {
-      "start": "ts-node src/index.ts"
+      "start": "ts-node src/index.ts",
+      "serve": "npx nodemon --exec 'npx ts-node --debug=9231 --inspect src/index.ts' --ext 'ts' --watch 'src'"
    }
 }
