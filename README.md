@@ -1,7 +1,7 @@
 # Express.js, TypeScript starter.
         
 Steps to run this project:
-1. Clone 
+1. Clone repository
 ```bash 
 $ git clone https://github.com/WebStyle/express-starter.git
 ```
