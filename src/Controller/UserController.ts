@@ -1,4 +1,4 @@
-import {Controller, Param, Body, Get, Post, Put, Delete} from "routing-controllers";
+import {Controller, Param, Body, Get, Post} from "routing-controllers";
 import {User} from "../Entity/User";
 
 @Controller("/users")
