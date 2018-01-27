@@ -1,17 +1,14 @@
 # Express.js, TypeScript starter.
         
 Steps to run this project:
-1. Clone repository
+* Clone the repository
 ```bash 
-$ git clone https://github.com/WebStyle/express-starter.git
+git clone --depth=1 https://github.com/WebStyle/express-starter.git <project_name>
 ```
-
-2. Run command:
+* Install dependencies
 ```bash
-$ cd express-starter
+cd <project_name>
 npm install
 ```
- 
-
-3. Setup database settings inside `ormconfig.json` file
-4. Run `npm start` command or `npm run serve`
+* Setup database settings inside `ormconfig.json` file
+* Run `npm start` command or `npm run serve`
