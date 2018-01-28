@@ -5,6 +5,7 @@
    "devDependencies": {
       "@types/jsonwebtoken": "^7.2.5",
       "@types/node": "^8.0.29",
+      "@types/passport": "^0.4.2",
       "ts-node": "^3.3.0",
       "typescript": "^2.5.2"
    },
@@ -15,6 +16,7 @@
       "class-validator": "^0.8.1",
       "express": "^4.16.2",
       "jsonwebtoken": "^8.1.1",
+      "passport": "^0.4.0",
       "pg": "^7.3.0",
       "pug": "^2.0.0-rc.4",
       "reflect-metadata": "^0.1.10",
