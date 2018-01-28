@@ -5,7 +5,7 @@ export class IndexController {
 
     @Get("/")
     @Render("index")
-    async index(): Promise<any> {
+    async index(): Promise<Object> {
         return {};
     }
 

@@ -10,8 +10,7 @@ createConnection().then(async connection => {
 
     app.set('views', join(__dirname + '/Views'));
     app.set('view engine', 'pug');
-    app.use(express.static(join(__dirname, "Public"), { maxAge: 31557600000 }));
-
+    app.use(express.static(join(__dirname, "Public")));
 
     app.use(json());
 

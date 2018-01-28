@@ -6,10 +6,18 @@ html(lang='')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title Express, TypeScript Starter
         meta(name='description', content='')
+        link(rel='stylesheet', href='/css/bootstrap.css')
+        link(rel='stylesheet', href='/css/bootstrap.grid.css')
         link(rel='stylesheet', href='/css/main.css')
 
     body
+        .d-flex.flex-column.flex-md-row.align-items-center.p-3.px-md-4.mb-3.bg-white.border-bottom.box-shadow
+            h5(class="my-0 mr-md-auto font-weight-normal") Project name
+            nav(class="my-2 my-md-0 mr-md-3")
+                a(class="p-2 text-dark" href="#") Features
+                a(class="p-2 text-dark" href="#") About
+                a(class="p-2 text-dark" href="#") Links
+            a(class="btn btn-outline-primary" href="#") Sign up
+
         .container
             block content
-
-
