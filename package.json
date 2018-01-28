@@ -16,6 +16,7 @@
       "express": "^4.16.2",
       "jsonwebtoken": "^8.1.1",
       "pg": "^7.3.0",
+      "pug": "^2.0.0-rc.4",
       "reflect-metadata": "^0.1.10",
       "routing-controllers": "^0.7.6",
       "typeorm": "0.1.11"
