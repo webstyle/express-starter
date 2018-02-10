@@ -2,7 +2,7 @@ extends layout
 
 block content
     .h4 Login
-        form
+        form(method="POST" action="/login")
             .form-group
                 label(for='inputUsername') Username
                 input#inputUsername.form-control(type='username', aria-describedby='emailHelp', placeholder='Enter email')

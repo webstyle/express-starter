@@ -20,6 +20,7 @@
       "class-validator": "^0.8.1",
       "cookie-parser": "^1.4.3",
       "express": "^4.16.2",
+      "express-flash": "0.0.2",
       "express-session": "^1.15.6",
       "js-md5": "^0.7.3",
       "jsonwebtoken": "^8.1.1",

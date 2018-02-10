@@ -3,6 +3,7 @@ import * as passport from "passport";
 import {Strategy} from "passport-local";
 import * as cookieParser from "cookie-parser";
 import * as session from "express-session";
+import * as flash from "express-flash";
 import "reflect-metadata";
 import {json} from 'body-parser';
 import {useExpressServer} from "routing-controllers";
@@ -31,6 +32,8 @@ createConnection().then(async connection => {
     app.use(session({secret: 'some key'}));
     app.use(passport.initialize());
     app.use(passport.session());
+    app.use(flash());
+
 
     app.set('views', join(__dirname + '/Views'));
     app.set('view engine', 'pug');
@@ -38,16 +41,33 @@ createConnection().then(async connection => {
 
     app.use(json());
 
+    app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+        res.locals.user = req.user;
+        next();
+    });
+
     // Add controllers
     useExpressServer(app, {
         controllers: [__dirname + "/Controller/**/*Controller.ts"]
     });
 
+    app.get('/login', (req, res) => res.render('login', {}));
+
     app.post('/login',
-        passport.authenticate('local', { successRedirect: '/',
+        passport.authenticate('local', {
+            successRedirect: '/',
             failureRedirect: '/login',
-            failureFlash: true })
-    );
+            failureFlash: true
+        }), (req, res) => {
+            res.redirect('/');
+        });
+
+    app.get('/logout',
+        function (req, res) {
+            req.logout();
+            res.redirect('/');
+        });
+
 
     // Run application
     app.listen(3000, () => console.log(`Server is run on port 3000`));
