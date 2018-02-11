@@ -7,11 +7,14 @@
       "@types/express-session": "^1.15.7",
       "@types/js-md5": "^0.4.2",
       "@types/jsonwebtoken": "^7.2.5",
+      "@types/lodash": "^4.14.102",
       "@types/node": "^8.0.29",
       "@types/passport": "^0.4.2",
       "@types/passport-local": "^1.0.32",
+      "husky": "^0.15.0-rc.8",
       "ts-node": "^3.3.0",
-      "typescript": "^2.5.2"
+      "typescript": "^2.5.2",
+      "typescript-formatter": "^7.0.1"
    },
    "dependencies": {
       "@types/body-parser": "^1.16.8",
@@ -24,6 +27,7 @@
       "express-session": "^1.15.6",
       "js-md5": "^0.7.3",
       "jsonwebtoken": "^8.1.1",
+      "lodash": "^4.17.5",
       "passport": "^0.4.0",
       "passport-local": "^1.0.0",
       "pg": "^7.3.0",
@@ -35,5 +39,10 @@
    "scripts": {
       "start": "ts-node src/index.ts",
       "serve": "npx nodemon --exec 'npx ts-node --debug=9231 --inspect src/index.ts' --ext 'ts' --watch 'src'"
+   },
+   "husky": {
+      "hooks": {
+         "pre-commit": "npx tsfmt -r"
+      }
    }
 }

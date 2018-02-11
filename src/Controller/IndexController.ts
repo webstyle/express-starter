@@ -1,4 +1,4 @@
-import {Controller, Get, Render} from "routing-controllers";
+import { Controller, Get, Render } from "routing-controllers";
 
 @Controller()
 export class IndexController {
