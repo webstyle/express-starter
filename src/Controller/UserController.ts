@@ -1,7 +1,7 @@
 import { Controller, Param, Body, Get, Post, Render } from "routing-controllers";
 import { User } from "../Entity/User";
-import {UserRepository} from "../Repository/UserRepository";
-import {getCustomRepository} from "typeorm";
+import { UserRepository } from "../Repository/UserRepository";
+import { getCustomRepository } from "typeorm";
 
 @Controller("/users")
 export class UserController {
