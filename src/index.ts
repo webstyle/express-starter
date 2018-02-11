@@ -1,5 +1,4 @@
 import * as express from "express";
-import * as passportLocal from "passport-local";
 import "reflect-metadata";
 import { json } from 'body-parser';
 import { useExpressServer } from "routing-controllers";
