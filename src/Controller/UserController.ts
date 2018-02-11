@@ -1,5 +1,5 @@
 import { Controller, Param, Body, Get, Post, Render } from "routing-controllers";
-import {User} from "../Entity/User";
+import { User } from "../Entity/User";
 
 @Controller("/users")
 export class UserController {
