@@ -9,4 +9,10 @@ export class IndexController {
         return {};
     }
 
+    @Get("/features")
+    @Render("pages/features")
+    async features(): Promise<Object> {
+        return {};
+    }
+
 }
