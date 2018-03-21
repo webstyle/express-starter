@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    .pricing-header.px-3.py-3.pt-md-5.pb-md-4.mx-auto.text-center
+        h4(class="display-4") TODO LIST!
+        form(method='POST' action='/todo')
+            .input-group.mb-3
+                input.form-control(type="text", placeholder="Enter the text", aria-label="Enter the text", aria-describedby="basic-addon2" name='text')
+                |
+                .input-group-append
+                    button.btn.btn-outline-success(type="submit") Add
+
+        .list-group
+            each item in list
+                a.list-group-item.list-group-item-action.flex-column.align-items-start(href='#')
+                    .d-flex.w-100.justify-content-between
+                        h5.mb-1= item.text
+                    p.mb-1
+

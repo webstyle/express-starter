@@ -16,11 +16,6 @@ createConnection().then(async connection => {
 
     app.use(json());
 
-    app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
-        res.locals.user = req.user;
-        next();
-    });
-
     // Add controllers
     useExpressServer(app, {
         controllers: [__dirname + "/Controller/**/*Controller.ts"]
