@@ -1,6 +1,6 @@
 import * as express from "express";
 import "reflect-metadata";
-import { json } from 'body-parser';
+import { json, urlencoded } from 'body-parser';
 import { useExpressServer } from "routing-controllers";
 import { createConnection } from "typeorm";
 import { join } from "path"
@@ -15,6 +15,7 @@ createConnection().then(async connection => {
     app.use(express.static(join(__dirname, "Public")));
 
     app.use(json());
+    app.use(urlencoded());
 
     // Add controllers
     useExpressServer(app, {
